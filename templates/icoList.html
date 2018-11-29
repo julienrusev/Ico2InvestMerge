@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>ico2invest</title>
+		<meta charset="utf-8">
+		<!--Title-->
+	    <link rel="icon" href="media/favicon.ico" sizes="16x16">
+	    <link rel="icon" href="media/TitleLogo.png">
+	    <!--Meta`s-->
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!--Fonts-->
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet">
+	    <!--Custom css-->
+	    <link rel="stylesheet" href="./styles/style.css">
+	    <!--BOOTSTRAP-->
+	    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+	    <script type="text/javascript" src="../scripts/jquery.min.js"></script>
+        <script type="text/javascript" src="../scripts/Chart.min.js"></script>
+        <script type="text/javascript" src="../scripts/app.js"></script>
+	</head>
+	<body>
+		<div class="header">
+			<div class="header_wrapper">
+				<a href="index.php"><img src="./media/logo.png" alt="logo" class="header-logo"></a>
+				<div class="header_menu">
+					<div class="ico_profit">
+						<p>ico profit</p>
+						<p>{{ dataArray[0].ICO_PROFIT_PER | number_format(0) }}%</p>
+					</div>
+					
+				    <div class="header_links">
+						<a href="../public/new_ico.php">publish ico</a>
+						<a href="#">ico alerts</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="advertise">
+			<div class="advertise-wrapper">
+				<div class="stats">
+					<h1 class="stats_title">Our ICO <br/> investions ROI</h1>
+					<div id="chart-container" style="margin-top: 10%;">
+		            	<canvas id="mycanvas"></canvas>
+		        	</div>
+		        	<p class="year">2018</p>
+				</div>
+				<div class="money_invest">
+					<p class="condition">if you invest</p>
+					<p class="money_invested">$1000</p>
+					<p class="condition">on 03.03.2018 with us now</p>
+					<p class="profit">$2500</p>
+				</div>
+			</div>
+		</div>
+		<div class="main_page_wrapper">
+			<div class="main_page_text">
+				<p class="page_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+			</div>
+			<div class="main_page_heading">
+				<h1 class="page_heading">ico list</h1>
+			</div>
+			<div class="main_page_icos">
+					<div class="icoList_names row">
+						<h2 class="icos_names_headings name_width col-2">Name</h2>
+						<h2 class="icos_names_headings invested_width col-2">Invested</h2>
+						<h2 class="icos_names_headings from_wallet_width col-2">% from Wallet</h2>
+						<h2 class="icos_names_headings icoPrice_width col-2">ICO Price</h2>
+						<h2 class="icos_names_headings currentPrice_width col-2">Current Price</h2>
+						<h2 class="icos_names_headings profit_width col-2">Profit</h2>
+					</div>
+				<div class="main_page_ico_list">
+					<div class="main_page_icos_wrapper">
+					{% for ico_info in dataArray %}
+						<form action="singleIco.php" method="post" name="singleIco" id="profitCalculator">
+							<div class="list">
+								<img src="{{ combinedArray[ico_info["ICO_SLUG"]] }}" height="75px" width="75px">
+								<div class="ico_names">
+		                    		<p class="ico_list_name">{{ ico_info.NAME }}</p>
+		                    		<button class="name_button">HOT</button>
+	                    		</div>
+	                    		<p class="nameList col-2">{{ ico_info.INVEST }}$</p>
+	                    		<p class="col-2">{{ ico_info.PER_FROM_WALLET | number_format(2, '.', ',') }}%</p>
+	                    		<p class="col-2">{{ ico_info.ICO_PRICE }}$</p>
+	                    		<p class="col-2">{{ ico_info.CURRENT_PRICE }}$</p>
+	                    		<input type="hidden" value="{{ ico_info.ID }}" name="ico_id" id="ico_id" />
+	                    		<div class="potential_profit">
+	                    			<h1 class="profit_percentage">
+	                    				{% if ico_info.POTENTIAL_ROI < 0 %}
+					                      {{ ico_info.POTENTIAL_ROI | number_format(2, '.', ',') }}%
+					                      {% else %}
+					                      +{{ ico_info.POTENTIAL_ROI | number_format(2, '.', ',') }}%
+					                    {% endif %}
+					                </h1>
+	                    			<button class="ico_list_button">VIEW DETAILS</button>
+	                    		</div>
+	                		</div>
+						</form>
+					{% endfor %}
+					</div>
+				</div>
+			</div>
+			<div class="main_page_submit">
+				<h1 class="submit_heading">submit ico</h1>
+				<a href="./public/new_ico.php"><button class="submit_button">submit</button></a>
+			</div>
+		</div>
+
+		

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Single Ico</title>
+	<!--Title-->
+    <link rel="icon" href="../media/favicon.ico" sizes="16x16">
+    <link rel="icon" href="../media/TitleLogo.png">
+    <!--Meta`s-->
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!--Fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <!--Custom css-->
+    <link rel="stylesheet" href="./styles/style.css">
+    <!--BOOTSTRAP-->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+	<div id="container">
+		<div class="header">
+			<div class="header_wrapper">
+				<a href="./index.php"><img src="./media/logo.png" alt="logo" class="header-logo"></a>
+				<div class="header_menu">
+					<div class="ico_profit">
+						<p>ico profit</p>
+						<p>{{ dataArray[0].ICO_PROFIT_PER | number_format(2, '.', ',') }}%</p>
+					</div>
+					
+				    <div class="header_links">
+						<a href="./public/new_ico.php">publish ico</a>
+						<a href="#">ico alerts</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="page">
+			<div class="page_wrapper">
+				<div class="ico">
+					<div class="ico_image">
+						<img src="{{ combinedArray[dataArray[0].ICO_SLUG] }}" alt="Ico Image">
+					</div>
+					<div class="ico_info">
+						<h1 class="ico_name">{{ dataArray[0].NAME }}</h1>
+						<div class="ico_details">
+							<div class="date">
+								<div class="start_date">
+									<h3>Start date</h3>
+									<span>{{ dataArray[0].START_DATE | slice(0,10) }}</span>
+								</div>
+								<div class="end_date">
+									<h3>End date</h3>
+									<span>{{ dataArray[0].END_DATE | slice(0,10)}}</span>
+								</div>
+							</div>
+							<div class="potential_profit">
+								<h3>Potential ROI</h3>
+								<span>{% if dataArray[0].POTENTIAL_ROI < 0 %}
+			                    		{{ dataArray[0].POTENTIAL_ROI | number_format(2, '.', ',') }}%
+					                    {% else %}
+					                    +{{ dataArray[0].POTENTIAL_ROI | number_format(2, '.', ',') }}%
+					                  {% endif %}
+					             </span>
+							</div>
+						</div>
+						<div class="description">
+							<h3>Description</h3>
+							<p>{{ dataArray[0].DESCRIPTION }}</p>
+						</div>
+					</div>
+				</div>
+				<hr class="divider">
+
+				<div class="ico_accordion">
+					<div class="positives">
+						<h1>Positives</h1>
+						{% for ico_info in dataArray if ico_info["STATUS"] == 1 %}
+							<div class="accordion">
+							<button class="toggle">{{ ico_info.TITLE }} <span class="plus">+</span></button>
+							<div id="panel-scroll" class="panel">
+								<p>
+									{{ ico_info.INFO }}
+								</p>
+							</div>
+							</div>
+						{% endfor %}
+					</div>
+					<div class="negatives">
+						<h1>Negatives</h1>
+						{% for ico_info in dataArray if ico_info["STATUS"] == 0 %}
+							<div class="accordion">
+							<button class="toggle">{{ ico_info.TITLE }} <span class="plus">+</span></button>
+							<div id="panel-scroll" class="panel">
+								<p>
+									{{ ico_info.INFO }}
+								</p>
+							</div>
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+
+				<div class="details">
+					<div class="questions">
+						<div class="first_question">
+							<h3>Is it blockchain tech?</h3>
+							<span>Yes</span>
+						</div>
+						<div class="second_question">
+							<h3 class="how_much">How much to invest</h3>
+							<span class="percentage">4%</span>
+							<h3 class="wallet">from your invest wallet</h3>
+						</div>
+					</div>
+					<hr class="divider">
+					<h1 class="view_details">view ico details in</h1>
+					<div class="other_icos">
+						<a href="https://icobench.com/"><img src="./media/bench.png"></a>
+						<a href="https://www.coinist.io/"><img src="./media/coinist.png"></a>
+						<a href="https://icorating.com/"><img src="./media/icorating.png"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<a href="index.php"><img src="media/FooterLogo.png" alt="logo" class="footer_logo"></a>
+		</div>
+	</div>
+<script src="scripts/jquery-3.3.1.min.js"></script>
+<script>
+	var acc = document.getElementsByClassName("toggle");
+	var i;
+
+	for (i = 0; i < acc.length; i++) {
+	    acc[i].addEventListener("click", function() {
+	        this.classList.toggle("active");
+	        var panel = this.nextElementSibling;
+	        if (panel.style.display === "block") {
+	            panel.style.display = "none";
+	        } else {
+	            panel.style.display = "block";
+	        }
+	    });
+	}
+</script>
+
+<script>
+	jQuery('.toggle').click(function(){
+		if(jQuery(this).hasClass( "active" )){
+			jQuery(this).find( " > span.plus" ).html("-");
+			jQuery(this).find( " > span.plus" ).css("font-size", "22px");
+		}else{
+			jQuery(this).find( " > span.plus" ).html("+");
+		}
+	});
+</script>
+</body>
+</html>
