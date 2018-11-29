@@ -417,6 +417,10 @@ body {
 .submitPage_ico_info{
 	padding-top: 7%;
 }
+.newsletter_form{
+	height: 80vh;
+	background-color: #29acd7;
+}
 /*----------------------------------------------*/
 
 /*----------FOOTER-------------*/
