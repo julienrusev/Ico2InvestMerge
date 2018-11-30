@@ -327,6 +327,12 @@ body {
 .submit_button:focus{
     outline: none;
 }
+.loginHeader{
+	color: white;
+	font-size: 30px;
+	font-family: 'Lato';
+	margin-top: 10px;
+}
 /*-------------------------------------------*/
 
 /*----------ICO Submit Page Content ------------*/
