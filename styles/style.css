@@ -155,7 +155,7 @@ body {
 
 /*--------------------------------------------*/
 
-/*----------ICO Main Page Content ------------*/
+/*----------ICO Styles ------------*/
 .main_page_text{
 	text-align: center;
 	border-bottom: 1px solid #dddddd;
@@ -333,9 +333,9 @@ body {
 	font-family: 'Lato';
 	margin-top: 10px;
 }
-/*-------------------------------------------*/
+#mycanvas{
 
-/*----------ICO Submit Page Content ------------*/
+}
 .submitPage{
 	font-family: 'Lato';
 }
@@ -423,29 +423,43 @@ body {
 .submitPage_ico_info{
 	padding-top: 7%;
 }
+.newsletter_tеxt{
+	text-align: center;
+}
 .newsletter_form{
-	height: 80vh;
-	background-color: #29acd7;
+	text-align: center;
 }
-/*----------------------------------------------*/
-
-/*----------FOOTER-------------*/
-.footer {
-	display: flex;
-	justify-content: center;
-	height: 112px;
-	background-color: #333333;
-	width: 100%;
+.newsletter_text{
+	font-size: 20px;
+    font-family: 'Lato';
 }
-.footer_logo{
-	width: 195px;
-    height: 40px;
-    margin-top: 40px;;
+.newsletter_input{
+	border-color: #25a9d5;
+    border: 1px solid #25a9d5;
+    border-radius: 8px;
+    height: 45px;
+    outline: none;
+    width: 800px;
+    background-color: #25a9d52e;
+    padding-left: 1%;
+    font-size: 25px;
 }
-/* ----------------------------*/
-
-
-/*-----------Single Ico--------*/
+.newsletter_button{
+    width: 30% !important;
+    height: 55px;
+    background-color: #25a9d5;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    font-size: 30px;
+    margin-top: 4%;
+    cursor: pointer;
+    margin: 20px auto !important;	
+}
+.description{
+	color: black;
+	display: none;
+}
 #container .header{
 	position: static;
 	background-image: url('../media/header-bg.png');
@@ -666,6 +680,25 @@ body {
 }
 /*-----------------------------*/
 
+/*----------FOOTER-------------*/
+.mail_footer{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+.footer {
+	display: flex;
+	justify-content: center;
+	height: 112px;
+	background-color: #333333;
+}
+.footer_logo{
+	width: 195px;
+    height: 40px;
+    margin-top: 40px;;
+}
+/* ----------------------------*/
+
 /*---------LOGIN FORM----------*/
 .login_form{
 	text-align: center;
@@ -720,8 +753,6 @@ body {
 		margin-right: 20px;
 	}
 	.advertise-wrapper {
-		margin-left: 20px;
-		margin-right: 20px;
 		flex-direction: column;
 		align-items: center;
 		width: 100%;
@@ -762,6 +793,9 @@ body {
 	}
 	.endDate_width {
 	    width: 165px;
+	}
+	.year{
+		text-align: center;
 	}
 }
 /*----------------------------------------------------------------*/
@@ -870,10 +904,6 @@ body {
 	.endDate_width {
 	    width: 125px;
 	}
-}
-/*----------------------------------------------------------------*/
-/*--------------------MEDIA QUERY /<960px/-----------------------*/
-@media only screen and (max-width: 960px) {
 	.icos_names {
 	    display: none;
 	    height: 90px;
@@ -908,6 +938,25 @@ body {
 		width: 100%;
 		margin: 0;
 		padding-top: 1%;
+	}
+	.potential_profit{
+		width: 100%;
+	}
+	.icoList_names{
+		display: none !important;
+	}
+	.nameList{
+		padding-left: 13px !important;
+	}
+	.newsletter_input{
+		width: 75%;
+	}
+	.description{
+		color: black;
+		display: contents;
+	}
+	.icoImages{
+		width: 100%;
 	}
 }
 /*----------------------------------------------------------------*/
@@ -962,7 +1011,84 @@ body {
 	}
 }
 /*---------------------------------------------------------------*/
-
+/*--------------------MEDIA QUERY /<=680px/-----------------------*/
+@media only screen and (max-width: 680px) {
+	.header {
+	    height: 140px;
+	    width: 100%;
+	    background-color: #1670a5;
+	    padding-top: 10px;
+	}
+	.header p, .header a {
+		color: black;
+		font-weight: 600;
+	}
+	.header_include {
+	    height: 100px;
+	    width: 100%;
+	    background-color: #1670a5 !important;
+	    padding-top: 10px;
+	}
+	.header_include p, .header_include a {
+		color: black;
+		font-weight: 600;
+	}
+	.header_wrapper{
+		margin: 0;
+	}
+	.header_wrapper {
+		width: auto;
+	    height: inherit; 
+	    display: block; 
+	    align-items: center; 
+	    justify-content: space-between; 
+	}
+	.header_menu {
+	    width: 100%;
+	    display: block;
+	}
+	.money_invest{
+		margin-top: 7%;
+	}
+	#mycanvas {
+    	width: 100% !important;
+	}
+	.stats{
+		width: 100%;
+	}
+	.money_invest{
+		width: 100%;
+	}
+}	
+/*---------------------------------------------------------------*/
+/*--------------------MEDIA QUERY /<=576px/-----------------------*/
+@media only screen and (max-width: 576px) {
+	.mycanvas{
+		display: block !important;
+	    height: 200px !important;
+	    width: 390px !important;
+	    margin: 0 auto !important;
+	}	
+	.stats_title{
+		padding-top: 3%;
+		padding-bottom: 3%;
+		font-size: 42px;
+	}
+	.stats{
+		height: 460px;
+	}
+	.newsletter_button{
+		width: 50% !important;
+	}
+	.newsletter_form{
+		overflow-y: scroll;
+	}
+	.submitPage_heading{
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+}
+    /*--------------------MEDIA QUERY /<=450px/-----------------------*/
 /*--------------------MEDIA QUERY /<=450px/-----------------------*/
 @media only screen and (max-width: 450px) {
 	.icos_names_headings{

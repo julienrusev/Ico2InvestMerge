@@ -27,12 +27,12 @@
 				<div class="header_menu">
 					<div class="ico_profit">
 						<p>ico profit</p>
-						<p>{{ dataArray[0].ICO_PROFIT_PER | number_format(0) }}%</p>
+						<p>{{ dataArray[0].ICO_PROFIT_PER | number_format(2, '.', ',') }}%</p>
 					</div>
 					
 				    <div class="header_links">
 						<a href="../public/new_ico.php">publish ico</a>
-						<a href="#">ico alerts</a>
+						<a href="../public/newsletter.php">ico alerts</a>
 					</div>
 				</div>
 			</div>
@@ -42,7 +42,7 @@
 				<div class="stats">
 					<h1 class="stats_title">Our ICO <br/> investions ROI</h1>
 					<div id="chart-container" style="margin-top: 10%;">
-		            	<canvas id="mycanvas"></canvas>
+		            	<canvas id="mycanvas" class="mycanvas"></canvas>
 		        	</div>
 		        	<p class="year">2018</p>
 				</div>
@@ -80,10 +80,10 @@
 		                    		<p class="ico_list_name">{{ ico_info.NAME }}</p>
 		                    		<button class="name_button">HOT</button>
 	                    		</div>
-	                    		<p class="nameList col-2">{{ ico_info.INVEST }}$</p>
-	                    		<p class="col-2">{{ ico_info.PER_FROM_WALLET | number_format(2, '.', ',') }}%</p>
-	                    		<p class="col-2">{{ ico_info.ICO_PRICE }}$</p>
-	                    		<p class="col-2">{{ ico_info.CURRENT_PRICE }}$</p>
+	                    		<p class="nameList col-12 col-lg-2"><span class="description">INVESTED: </span>{{ ico_info.INVEST }}$</p>
+	                    		<p class="col-12 col-lg-2"><span class="description">% FROM WALLET: </span>{{ ico_info.PER_FROM_WALLET | number_format(2, '.', ',') }}%</p>
+	                    		<p class="col-12 col-lg-2"><span class="description">ICO PRICE: </span>{{ ico_info.ICO_PRICE }}$</p>
+	                    		<p class="col-12 col-lg-2"><span class="description">CURRENT PRICE: </span>{{ ico_info.CURRENT_PRICE }}$</p>
 	                    		<input type="hidden" value="{{ ico_info.ID }}" name="ico_id" id="ico_id" />
 	                    		<div class="potential_profit">
 	                    			<h1 class="profit_percentage">
@@ -107,4 +107,5 @@
 			</div>
 		</div>
 
-		
+	</body>
+</html>

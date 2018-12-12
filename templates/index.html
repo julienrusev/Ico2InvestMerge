@@ -32,7 +32,7 @@
 					</div>
 				    <div class="header_links">
 						<a href="./public/new_ico.php">publish ico</a>
-						<a href="#">ico alerts</a>
+						<a href="../public/newsletter.php">ico alerts</a>
 					</div>
 				</div>
 			</div>
@@ -83,8 +83,8 @@
 		                    		<button class="name_button">HOT</button>
 	                    		</div>
 	                    		<p class="ico_list_description">{{ ico_info.DESCRIPTION }}</p>
-	                    		<p class="ico_list_startDate">{{ ico_info.START_DATE | slice(0,10) }}</p>
-	                    		<p class="ico_list_endDate">{{ ico_info.END_DATE | slice(0,10) }}</p>
+	                    		<p class="ico_list_startDate"><span class="description">START DATE: </span>{{ ico_info.START_DATE | slice(0,10) }}</p>
+	                    		<p class="ico_list_endDate"><span class="description">END DATE: </span>{{ ico_info.END_DATE | slice(0,10) }}</p>
 	                    		
 	                    		<input type="hidden" value="{{ ico_info.ID }}" name="ico_id" id="ico_id" />
 	                    		<div class="potential_profit">

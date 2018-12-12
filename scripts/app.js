@@ -5,11 +5,11 @@ $(document).ready(function(){
 		success: function(data) {
 			console.log(data);
 			var dates = [];
-			var wallet = [];
+			var profit = [];
 
 			for(var i in data) {
 				dates.push(data[i].dates);
-				wallet.push(data[i].wallet);
+				profit.push(data[i].profit);
 			}
 
 			var chartdata = {
@@ -21,7 +21,7 @@ $(document).ready(function(){
 						borderColor: '#2698d3',
 						hoverBackgroundColor: 'yellow',
 						hoverBorderColor: 'yellow',
-						data: wallet
+						data: profit
 					}
 				]
 			};
