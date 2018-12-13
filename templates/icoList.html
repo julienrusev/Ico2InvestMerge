@@ -23,7 +23,7 @@
 	<body>
 		<div class="header">
 			<div class="header_wrapper">
-				<a href="index.php"><img src="./media/logo.png" alt="logo" class="header-logo"></a>
+				<a href="index"><img src="./media/logo.png" alt="logo" class="header-logo"></a>
 				<div class="header_menu">
 					<div class="ico_profit">
 						<p>ico profit</p>
@@ -31,8 +31,8 @@
 					</div>
 					
 				    <div class="header_links">
-						<a href="../public/new_ico.php">publish ico</a>
-						<a href="../public/newsletter.php">ico alerts</a>
+						<a href="../public/new_ico">publish ico</a>
+						<a href="../public/newsletter">ico alerts</a>
 					</div>
 				</div>
 			</div>
@@ -73,7 +73,7 @@
 				<div class="main_page_ico_list">
 					<div class="main_page_icos_wrapper">
 					{% for ico_info in dataArray %}
-						<form action="singleIco.php" method="post" name="singleIco" id="profitCalculator">
+						<form action="singleIco" method="post" name="singleIco" id="profitCalculator">
 							<div class="list">
 								<img src="{{ combinedArray[ico_info["ICO_SLUG"]] }}" height="75px" width="75px">
 								<div class="ico_names">
@@ -103,7 +103,7 @@
 			</div>
 			<div class="main_page_submit">
 				<h1 class="submit_heading">submit ico</h1>
-				<a href="./public/new_ico.php"><button class="submit_button">submit</button></a>
+				<a href="./public/new_ico"><button class="submit_button">submit</button></a>
 			</div>
 		</div>
 

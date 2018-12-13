@@ -3,6 +3,7 @@
 	<head>
 		<title>ico2invest</title>
 		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<!--Title-->
 	    <link rel="icon" href="media/favicon.ico" sizes="16x16">
 	    <link rel="icon" href="media/TitleLogo.png">
@@ -24,15 +25,15 @@
 	<body>
 		<div class="header">
 			<div class="header_wrapper">
-				<a href=""><img src="./media/logo.png" alt="logo" class="header-logo"></a>
+				<a href="index"><img src="./media/logo.png" alt="logo" class="header-logo"></a>
 				<div class="header_menu">
 					<div class="ico_profit">
 						<p>ico profit</p>
 						<p>{{ dataArray[0].ICO_PROFIT_PER | number_format(2, '.', ',') }}%</p>
 					</div>
 				    <div class="header_links">
-						<a href="./public/new_ico.php">publish ico</a>
-						<a href="../public/newsletter.php">ico alerts</a>
+						<a href="./public/new_ico">publish ico</a>
+						<a href="../public/newsletter">ico alerts</a>
 					</div>
 				</div>
 			</div>
@@ -51,7 +52,7 @@
 					<p class="money_invested">$1000</p>
 					<p class="condition">on 03.03.2018 with us now</p>
 					<p class="profit">$2500</p>
-					<a href="./icoList.php"><button class="past_ico">our past ico list</button></a>
+					<a href="./icoList"><button class="past_ico">our past ico list</button></a>
 				</div>
 			</div>
 		</div>
@@ -75,7 +76,7 @@
 				<div class="main_page_ico_list">
 					<div class="main_page_icos_wrapper">
 					{% for ico_info in dataArray %}
-						<form action="singleIco.php" method="post" name="singleIco" id="profitCalculator">
+						<form action="singleIco" method="post" name="singleIco" id="profitCalculator">
 							<div class="list">
 								<img src="{{ combinedArray[ico_info["ICO_SLUG"]] }}" height="75px" width="75px">
 								<div class="ico_names">
@@ -105,7 +106,7 @@
 			</div>
 			<div class="main_page_submit">
 				<h1 class="submit_heading">submit ico</h1>
-				<a href="./public/new_ico.php"><button class="submit_button">submit</button></a>
+				<a href="./public/new_ico"><button class="submit_button">submit</button></a>
 			</div>
 		</div>
 
