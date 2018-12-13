@@ -1,0 +1,852 @@
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+	height: 100%;
+	background-color: aliceblue;
+}
+html {
+	height: 100%;
+}
+textarea {
+	resize: none;
+}
+.positives,
+.negatives {
+	width: unset;
+}
+.header {
+	display: flex;
+	height: 112px;
+	border-bottom: none;
+	width: 100%; 
+	position: static;
+}
+.header_left {
+	width: 50%;
+	display: flex;
+	align-items: center;
+}
+.header_right {
+	width: 50%;
+	display: flex;
+	align-items: center;
+	background-color: rgb(35, 154, 254);
+	justify-content: flex-end;
+	color: white;
+}
+.header_right p {
+	padding-right: 70px;
+}
+.header_logo {
+	padding-left: 70px;
+}
+.panel_body {
+	display: flex;
+	background-color: aliceblue;
+	overflow: auto;
+    padding-bottom: 112px;
+}
+#container_index,
+#container_update,
+#container_update_form,
+#container_update_todb,
+#container_delete,
+#container_delete_ico,
+#container_delete_fromdb,
+#container_create_ico,
+#container_upload_ico {
+	min-height: 100%;
+}
+#container_update_form .panel_body,
+#container_delete_ico .panel_body,
+#container_create_ico .panel_body {
+	margin-bottom: 150px;
+}
+#container_update_form .update_btn,
+#container_delete_ico .change_btn,
+#container_create_ico .create_btn {
+	margin-bottom: -100px;
+}
+.dashboard {
+	width: 300px;
+	padding: 0px 10px;
+}
+.text_area {
+	width: 100%;
+	padding: 0px 50px;
+	position: relative;
+}
+#container_update .text_area {
+	padding: 50px 50px;
+}
+.text_area h1 {
+	text-align: center;
+}
+.menu {
+	list-style-type: none;
+	padding: 0px;
+	margin: 0;
+}
+.menu a {
+	text-decoration: none;
+}
+.menu a li {
+	text-align: center;
+	color: #31578c;
+	color: black;
+    padding: 15px 0px;
+    transition: transform .4s;
+    border-bottom: 2px solid #25a9d5;
+    font-size: 20px;
+    border-radius: 5px;
+}
+.menu .home:hover,
+.menu .update:hover,
+.menu .delete:hover,
+.menu .add:hover
+{
+	transform: scale(1.1);
+}
+.select2-container {
+	width: 550px !important;
+}
+.image_size {
+	width: 100px;
+	height: 100px;
+	border-radius: 100%;
+}
+.name,
+.start_date,
+.end_date,
+.ico_price,
+.current_price,
+.ico_quantity,
+.update_btn,
+.change_btn,
+.check_ico,
+.create_btn,
+.ico_name,
+.ico_quantity,
+.ico_description,
+.ico_short_description,
+.ico_status,
+.positives,
+.negatives,
+.ico_slug,
+#valid_id,
+#add_positive,
+#add_negative {
+	margin: 5px;
+	border: 1px solid rgb(38, 178, 212);
+	background-color: #25a9d52e;
+	border-radius: 5px;
+	padding: 5px 10px;
+	/*width: 180px;*/
+	font-size: 20px;
+	margin-right: 0px;
+}
+.ico_status,
+.ico_quantity,
+.ico_price,
+.start_date,
+.end_date {
+	width: 269px;
+}
+.readonly {
+	background-color: aliceblue;
+	font-size: 35px;
+	border: none;
+	margin: 5px;
+	width: 197px;
+	margin-bottom: 0;
+}
+.readonly_input {
+	background-color: aliceblue;
+	border: none;
+	margin: 5px;
+	width: 197px;
+	margin-bottom: 10px;
+	font-size: 20px;
+}
+.readonly_txtarea {
+	background-color: aliceblue;
+	border: none;
+	margin-bottom: 0;
+	font-size: 20px;
+}
+.readonly_name {
+	font-size: 35px;
+	background-color: aliceblue;
+	border: none;
+	margin: 5px;
+	width: 197px;
+	margin-bottom: 10px;
+	color: rgb(35, 154, 254);
+}
+#container_update_form .readonly_name {
+	margin-bottom: 0;
+	color: rgb(35, 154, 254);
+}
+.textarea_holder_pos,
+.textarea_holder_neg {
+	display: flex;
+    background-color: aliceblue;
+    width: 100%;
+    border-radius: 5px;
+    flex-direction: column;
+}
+.remove {
+    width: 90px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 0 auto;
+    background-color: #25a9d5;
+}
+.remove_text_field {
+	width: 90px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 0 auto;
+    background-color: #25a9d5;
+}
+.positives,
+.negatives {
+	margin: 5px 0px;
+	/*width: 320px;*/
+	width: 100%;
+}
+.update_form,
+.detele_form,
+.create_form {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.choose_form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.update_btn,
+.change_btn,
+.create_btn {
+	position: absolute;
+    bottom: 0;
+}
+.details,
+.pos_holder,
+.neg_holder,
+.descr_holder, 
+.short_descr_holder {
+	margin-top: 30px;
+	background-color: aliceblue;
+	width: 420px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+label { 
+	display: inline-block; 
+	width: 120px; 
+	text-align: left; 
+	font-size: 20px;
+	font-weight: bold;
+}
+#container_delete label {
+	display: inline-block; 
+	width: 190px; 
+	text-align: left; 
+	font-size: 30px;
+}
+.check_ico,
+.update_btn,
+.change_btn,
+.create_btn {
+	width: 250px;
+    padding: 10px 0px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(38, 178, 212);
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    margin: 0;
+    text-transform: uppercase;
+}
+.ico_quantity {
+	margin-bottom: 25px;
+}
+.descr {
+	font-size: 20px;
+}
+.ico_description,
+.ico_short_description {
+	margin: 0;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    /*width: 398px;*/
+    width: 100%;
+}
+.pos, 
+.neg {
+	padding-bottom: 10px;
+	font-size: 35px;
+}
+.pos_title,
+.neg_title {
+	background-color: #25a9d52e;
+    border: 1px solid rgb(38, 178, 212);
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 20px;
+}
+#add_positive,
+#add_negative {
+	width: 100%;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 0 auto;
+    background-color: #25a9d5;
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+}
+#container_update .text_area,
+#container_delete .text_area,
+#container_create_ico .text_area {
+	padding-bottom: 140px;
+}
+.update_btn,
+.change_btn,
+.create_btn {
+	margin: 0 auto;
+	margin-bottom: 50px;
+	left: 0;
+	right: 0;
+}
+.status_help {
+	margin: 0px;
+	text-align: right;
+	font-style: italic;
+}
+.select2-container--default .select2-selection--single {
+	border-color: #25a9d5;
+    border: 1px solid #25a9d5;
+    border-radius: 5px;
+    background-color: #25a9d52e;
+}
+.footer {
+	position: relative;
+    bottom: 0;
+    margin-top: -112px;
+    clear: both;
+}
+.delete_descr,
+.delete_short_descr {
+	font-size: 35px;
+	width: 100%;
+}
+.descr_holder,
+.short_descr_holder {
+	margin-top: 30px;
+	width: 380px;
+}
+.radio_visible {
+	margin-bottom: 10px;
+}
+#container_delete_ico label {
+	font-size: 20px;
+}
+input[type="file"] {
+    display: none;
+}
+.custom-file-upload {
+    border: none;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    width: 269px;
+    border-radius: 5px;
+    background-color: #25a9d5;
+    color: white;
+}
+#container_create_ico .details {
+	margin-top: 80px;
+}
+.menu-link {
+	display: none;
+}
+#toggle {
+	display: none;
+}
+.show {
+	display: none;
+}
+.select2-container--default .select2-selection--single {
+	font-size: 30px;
+    height: 45px;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+	height: inherit;
+    display: flex;
+    align-items: center;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+	height: inherit;
+}
+#container_update_form .status_holder {
+	display: flex;
+	margin-bottom: 30px;
+}
+#container_update_form .range {
+	margin-left: 10px;
+	display: flex;
+	align-items: center;
+}
+#container_update_form .slider {
+	-webkit-appearance: none;  /* Override default CSS styles */
+  	appearance: none;
+  	width: 62px; /* Full-width */
+  	height: 25px; /* Specified height */
+  	background: #d3d3d3; /* Grey background */
+  	outline: none; /* Remove outline */
+  	opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  	-webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  	transition: opacity .2s;
+  	border-radius: 15px;
+  	border: 2px solid rgb(38, 178, 212);
+  	background-color: #25a9d52e;
+  	margin: 0px 10px;
+}
+#container_update_form .slider:hover {
+	opacity: 1;
+}
+#container_update_form .slider::-webkit-slider-thumb {
+	-webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #25a9d5; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+  border-radius: 15px;
+}
+#container_update_form .slider::-moz-range-thumb{
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #25a9d5; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+#container_update_form .zero,
+#container_update_form .one {
+	border-radius: 15px;
+  	border: none;
+  	background-color: #25a9d5;
+  	font-size: 22px;
+  	cursor: pointer;
+  	outline: none;
+  	color: white;
+  	padding: 5px 10px;
+  	width: 104px;
+}
+/*MEDIA QUERIES*/
+@media only screen and (max-width: 890px) {
+	#container_update .menu-link,
+	#container_delete .menu-link {
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  width: 50px;
+	  height: 50px;
+	  background-color: #fff;
+	  border-radius: 50%;
+	  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+	  margin-right: 10px;
+	}
+	#container_update .menu-link span,
+	#container_delete .menu-link span, 
+	#container_update .menu-link span::before,
+	#container_delete .menu-link span::before, 
+	#container_update .menu-link span::after,
+	#container_delete .menu-link span::after {
+		width: 25px;
+		height: 2px;
+		position: absolute;
+		background-color: rgb(35, 154, 254);
+	}
+	#container_update .menu-link span::before,
+	#container_delete .menu-link span::before,
+	#container_update .menu-link span::after,
+	#container_delete .menu-link span::after {
+		content: '';
+		display: block;
+		transition: 0.3s;
+	}
+	#container_update .menu-link span::before,
+	#container_delete .menu-link span::before {
+	transform: translateY(-5px);
+}
+	#container_update .menu-link span::after,
+	#container_delete .menu-link span::after {
+		transform: translateY(5px);
+	}
+	#container_update .menu-link-active span,
+	#container_delete .menu-link-active span {
+		background-color: transparent;
+	}
+	#container_update .menu-link-active span::before,
+	#container_delete .menu-link-active span::before {
+		transform: rotate(135deg);
+	}
+	#container_update .menu-link-active span::after,
+	#container_delete .menu-link-active span::after {
+		transform: rotate(-135deg);
+	}
+	#container_update .panel_body,
+	#container_delete .panel_body {
+		flex-direction: column;
+	}
+	#container_update .dashboard,
+	#container_delete .dashboard {
+		width: 100%;
+    	margin: 0 auto;
+    	display: none;
+    	padding: 0;
+    	position: absolute;
+    	z-index: 1;
+    	background-color: aliceblue;
+	}
+	#container_update .text_area,
+	#container_delete .text_area {
+		width: unset;
+	}
+	#container_update .header,
+	#container_delete .header {
+		flex-direction: column;
+		height: 200px;
+	}
+	#container_update .header_left,
+	#container_delete .header_left,
+	#container_update .header_right,
+	#container_delete .header_right {
+		width: 100%;
+		height: 100px;
+	}
+	#container_update .header_left,
+	#container_delete .header_left {
+		display: flex;
+		justify-content: center;
+	}
+	#container_update .header_logo,
+	#container_delete .header_logo {
+		padding-left: 0;
+	}
+	#container_update .show,
+	#container_delete .show {
+		display: block;
+		padding-right: 50px;
+		font-size: 30px;
+	}
+	#container_update .menu a li,
+	#container_delete .menu a li {
+		font-size: 35px;
+	}
+	#container_update .text_area,
+	#container_delete .text_area {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	#container_update .select2-container,
+	#container_delete .select2-container {
+		width: 65% !important;
+	}
+}
+@media only screen and (max-width: 768px) {
+	#container_index .dashboard,
+	#container_update_form .dashboard,
+	#container_update_todb .dashboard,
+	#container_delete_ico .dashboard,
+	#container_delete_fromdb .dashboard,
+	#container_create_ico .dashboard,
+	#container_upload_ico .dashboard {
+		display: none;
+	}
+	.menu-link {
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  width: 50px;
+	  height: 50px;
+	  background-color: #fff;
+	  border-radius: 50%;
+	  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+	  margin-right: 10px;
+	}
+	.menu-link span, 
+	.menu-link span::before, 
+	.menu-link span::after {
+		width: 25px;
+		height: 2px;
+		position: absolute;
+		background-color: rgb(35, 154, 254);
+	}
+	.menu-link span::before,
+	.menu-link span::after {
+		content: '';
+		display: block;
+		transition: 0.3s;
+	}
+	.menu-link span::before {
+	transform: translateY(-5px);
+}
+	.menu-link span::after {
+		transform: translateY(5px);
+	}
+	.menu-link-active span {
+		background-color: transparent;
+	}
+	.menu-link-active span::before {
+		transform: rotate(135deg);
+	}
+	.menu-link-active span::after {
+		transform: rotate(-135deg);
+	}
+	#container_index .panel_body,
+	#container_update_form .panel_body,
+	#container_update_todb .panel_body,
+	#container_delete_ico .panel_body,
+	#container_delete_fromdb .panel_body,
+	#container_create_ico .panel_body,
+	#container_upload_ico .panel_body {
+		flex-direction: column;
+	}
+	#container_index .dashboard,
+	#container_update_form .dashboard,
+	#container_update_todb .dashboard,
+	#container_delete_ico .dashboard,
+	#container_delete_fromdb .dashboard,
+	#container_create_ico .dashboard,
+	#container_upload_ico .dashboard {
+		width: 100%;
+    	margin: 0 auto;
+    	display: none;
+    	padding: 0;
+    	position: absolute;
+    	z-index: 1;
+    	background-color: aliceblue;
+	}
+	#container_index .text_area,
+	#container_update_form .text_area,
+	#container_update_todb .text_area,
+	#container_delete_ico .text_area,
+	#container_delete_fromdb .text_area,
+	#container_create_ico .text_area,
+	#container_upload_ico .text_area {
+		/*width: unset;*/
+		width: 100%;
+	}
+	#container_index .header,
+	#container_update_form .header,
+	#container_update_todb .header,
+	#container_delete_ico .header,
+	#container_delete_fromdb .header,
+	#container_create_ico .header,
+	#container_upload_ico .header {
+		flex-direction: column;
+		height: 200px;
+	}
+	#container_index .header_left,
+	#container_update_form .header_left,
+	#container_index .header_right,
+	#container_update_form .header_right,
+	#container_update_todb .header_left,
+	#container_update_todb .header_right,
+	#container_delete_ico .header_left,
+	#container_delete_ico .header_right,
+	#container_delete_fromdb .header_left,
+	#container_delete_fromdb .header_right,
+	#container_create_ico .header_left,
+	#container_create_ico .header_right,
+	#container_upload_ico .header_left,
+	#container_upload_ico .header_right {
+		width: 100%;
+		height: 100px;
+	}
+	#container_index .header_left,
+	#container_update_form .header_left,
+	#container_update_todb .header_left,
+	#container_delete_ico .header_left,
+	#container_delete_fromdb .header_left,
+	#container_create_ico .header_left,
+	#container_upload_ico .header_left {
+		display: flex;
+		justify-content: center;
+	}
+	#container_index .header_logo,
+	#container_update_form .header_logo,
+	#container_update_todb .header_logo,
+	#container_delete_ico .header_logo,
+	#container_delete_fromdb .header_logo,
+	#container_create_ico .header_logo,
+	#container_upload_ico .header_logo {
+		padding-left: 0;
+	}
+	#container_index .show,
+	#container_update_form .show,
+	#container_update_todb .show,
+	#container_delete_ico .show,
+	#container_delete_fromdb .show,
+	#container_create_ico .show,
+	#container_upload_ico .show {
+		display: block;
+		padding-right: 50px;
+		font-size: 30px;
+	}
+	#container_index .menu a li,
+	#container_update_form .menu a li,
+	#container_update_todb .menu a li,
+	#container_delete_ico .menu a li,
+	#container_delete_fromdb .menu a li,
+	#container_create_ico .menu a li,
+	#container_upload_ico .menu a li {
+		font-size: 35px;
+	}
+	#container_update_form .details,
+	#container_delete_ico .details,
+	#container_create_ico .details,
+	#container_update_form .pos_holder,
+	#container_delete_ico .pos_holder,
+	#container_create_ico .pos_holder,
+	#container_update_form .neg_holder,
+	#container_delete_ico .neg_holder,
+	#container_create_ico .neg_holder {
+		width: 100%;
+	}
+	#container_update_form label,
+	#container_delete_ico label,
+	#container_create_ico label {
+		font-size: 30px;
+		width: 240px;
+		font-weight: bold;
+	}
+	#container_update_form .descr {
+		font-size: 30px;
+		font-weight: bold;
+	}
+	#container_update_form .readonly_name,
+	#container_delete_ico .readonly_name {
+		margin: 0;
+		margin-bottom: 30px;
+	}
+	#container_update_form .ico_status,
+	#container_update_form .ico_quantity,
+	#container_update_form .ico_price,
+	#container_update_form .start_date,
+	#container_update_form .end_date {
+		margin-left: 0;
+	}
+	#container_create_ico .name,
+	#container_create_ico .api_id,
+	#container_create_ico .ico_slug,
+	#container_create_ico .start_date,
+	#container_create_ico .end_date,
+	#container_create_ico .ico_price,
+	#container_create_ico .current_price,
+	#container_create_ico .ico_quantity {
+		margin-left: 0;
+	}
+}
+@media only screen and (max-width: 600px) {
+	#container_update .select2-container,
+	#container_delete .select2-container {
+		width: 100% !important;
+	}
+	#container_create_ico .name,
+	#container_create_ico .api_id,
+	#container_create_ico .ico_slug,
+	#container_create_ico .start_date,
+	#container_create_ico .end_date,
+	#container_create_ico .ico_price,
+	#container_create_ico .current_price,
+	#container_create_ico .ico_quantity,
+	#container_create_ico .custom-file-upload {
+		width: 100%;
+	}
+	#container_update_form .status_holder {
+		flex-direction: column;
+	}
+	#container_update_form .range {
+		margin-left: 0;
+		margin-top: 10px;
+	}
+}
+@media only screen and (max-width: 500px) {
+	#container_update_form .text_area,
+	#container_index .text_area,
+	#container_update_todb .text_area,
+	#container_delete_ico .text_area,
+	#container_delete_fromdb .text_area,
+	#container_create_ico .text_area,
+	#container_upload_ico .text_area {
+		padding: 0px 15px;
+	}
+	#container_update_form .details,
+	#container_create_ico .details,
+	#container_update_form .pos_holder,
+	#container_create_ico .pos_holder,
+	#container_update_form .neg_holder,
+	#container_create_ico .neg_holder {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.select2-container--default .select2-results>.select2-results__options,
+	.select2-container--default .select2-search--dropdown .select2-search__field {
+		font-size: 35px;
+	}
+	.start_date,
+	.end_date,
+	.ico_price,
+	.ico_quantity,
+	.ico_description,
+	.ico_short_description,
+	.ico_status,
+	.pos_title,
+	.positives,
+	.neg_title,
+	.negatives,
+	#valid_id,
+	.ico_slug,
+	.name,
+	.current_price {
+		font-size: 30px;
+	}
+	.remove,
+	.remove_text_field {
+		width: 140px;
+		font-size: 35px;
+	}
+	#add_positive, 
+	#add_negative {
+		font-size: 35px;
+	}
+	#container_update_form .update_btn, 
+	#container_delete_ico .change_btn, 
+	#container_create_ico .create_btn {
+		font-size: 35px;
+	}
+	#container_delete_ico .readonly_txtarea {
+		font-size: 27px;
+		margin-top: 20px;
+	}
+}
