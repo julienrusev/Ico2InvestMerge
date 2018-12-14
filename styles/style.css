@@ -6,24 +6,16 @@ body {
 	top: 110px;
 }
 .header {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: center;
-	    -ms-flex-pack: center;
-	        justify-content: center;
+	justify-content: center;
 	height: 112px;
 	border-bottom: 1px solid rgb(222, 222, 226);
 	position: absolute;
 	width: 100%; 
 }
 .header_include {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: center;
-	    -ms-flex-pack: center;
-	        justify-content: center;
+	justify-content: center;
 	height: 112px;
 	border-bottom: 1px solid rgb(222, 222, 226);
 	width: 100%;
@@ -35,28 +27,16 @@ body {
 .header_wrapper {
 	width: 1142px;
 	height: inherit;
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
-	-webkit-box-pack: justify;
-	    -ms-flex-pack: justify;
-	        justify-content: space-between;
+	align-items: center;
+	justify-content: space-between;
 }
 .header_menu {
 	width: 360px;
 	height: inherit;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: space-between;
+    align-items: center;
 }
 .ico_profit {
 	color: white;
@@ -99,12 +79,8 @@ body {
 	width: 1142px;
 	margin: 0 auto;
 	height: inherit;
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: justify;
-	    -ms-flex-pack: justify;
-	        justify-content: space-between;
+	justify-content: space-between;
 }
 .stats {
 	position: relative;
@@ -137,16 +113,9 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    align-items: center;
     margin-top: 100px;
     background-position-y: -40px; 
 }
@@ -178,8 +147,6 @@ body {
 	color: white;
 	border: none;
 	border-radius: 5px;
-	background-image: -webkit-linear-gradient(330deg, #2293d8 0%, #26b1d4 100%);
-	background-image: -o-linear-gradient(330deg, #2293d8 0%, #26b1d4 100%);
 	background-image: linear-gradient(120deg, #2293d8 0%, #26b1d4 100%);
 	padding: 20px 35px;
 	font-family: "Montserrat", Sans-serif;
@@ -220,8 +187,7 @@ body {
     margin: 0 auto;
 }
 .main_page_icos{
-    -webkit-box-shadow: 0px 0px 100px -30px rgba(0,0,0,0.5);
-            box-shadow: 0px 0px 100px -30px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 100px -30px rgba(0,0,0,0.5);
 	margin-bottom: 60px;
 	border-radius: 5px;
 }
@@ -230,8 +196,6 @@ body {
 	margin: 0 auto;
 }
 .icos_names{
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
 	height: 90px;
 }
@@ -255,8 +219,6 @@ body {
     padding-bottom: 35px;
 }
 .icoList_names{
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
 	height: 90px;
 	padding-left: 4%;
@@ -282,8 +244,6 @@ body {
 	color: black;
 }
 .list{
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     padding-top: 30px;
     padding-bottom: 30px;
@@ -398,12 +358,8 @@ body {
 }
 .submitPage_images{
 	padding-bottom: 60px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
 }
 .submitPage_required{
 	color: red;
@@ -522,12 +478,8 @@ body {
 	margin: 0 auto;
 }
 .ico {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: justify;
-	    -ms-flex-pack: justify;
-	        justify-content: space-between;
+	justify-content: space-between;
 	margin-top: 50px;
 }
 .ico_image img {
@@ -546,16 +498,10 @@ body {
 	word-break: break-all;
 }
 .ico_details {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: justify;
-	    -ms-flex-pack: justify;
-	        justify-content: space-between;
+	justify-content: space-between;
 }
 .date {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
 	padding-top: 20px;
 	padding-bottom: 20px;
@@ -593,12 +539,8 @@ body {
 	background-color: rgb(228, 228, 228);
 }
 .ico_accordion {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: justify;
-	    -ms-flex-pack: justify;
-	        justify-content: space-between;
+	justify-content: space-between;
 }
 .positives {
 	width: 49.122807017543856%;
@@ -680,12 +622,8 @@ body {
 	margin-top: 30px;
 }
 .questions {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: justify;
-	    -ms-flex-pack: justify;
-	        justify-content: space-between;
+	justify-content: space-between;
 	padding-top: 45px;
 }
 .first_question, .second_question {
@@ -716,8 +654,7 @@ body {
     font-weight: 600;
     background-color: rgb(255, 255, 255);
     border-radius: 8px;
-    -webkit-box-shadow: 0 0 5px 0 rgba(175,175,203,.75);
-            box-shadow: 0 0 5px 0 rgba(175,175,203,.75);
+    box-shadow: 0 0 5px 0 rgba(175,175,203,.75);
     padding: 5px 20px;
     font-family: 'Lato', sans-serif;
     margin-right: 20px;
@@ -734,12 +671,8 @@ body {
     text-transform: uppercase;
 }
 .other_icos {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: justify;
-	    -ms-flex-pack: justify;
-	        justify-content: space-between;
+	justify-content: space-between;
 	margin-bottom: 60px;
 	margin-top: 30px;
 }
@@ -756,17 +689,12 @@ body {
 
 /*----------FOOTER-------------*/
 .mail_footer{
-    position: absolute;
     width: 100%;
     bottom: 0;
 }
 .footer {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: center;
-	    -ms-flex-pack: center;
-	        justify-content: center;
+	justify-content: center;
 	height: 112px;
 	background-color: #333333;
 }
@@ -817,9 +745,7 @@ body {
 	    padding-right: 20px;
 	}
 	.stats {
-		-webkit-box-ordinal-group: 2;
-		    -ms-flex-order: 1;
-		        order: 1;
+		order: 1;
 		margin-top: 0;
 	}
 	.stats_title {
@@ -833,13 +759,8 @@ body {
 		margin-right: 20px;
 	}
 	.advertise-wrapper {
-		-webkit-box-orient: vertical;
-		-webkit-box-direction: normal;
-		    -ms-flex-direction: column;
-		        flex-direction: column;
-		-webkit-box-align: center;
-		    -ms-flex-align: center;
-		        align-items: center;
+		flex-direction: column;
+		align-items: center;
 		width: 100%;
 	}
 	.advertise {
@@ -860,13 +781,8 @@ body {
 		width: unset;
 	}
 	.other_icos {
-		-webkit-box-orient: vertical;
-		-webkit-box-direction: normal;
-		    -ms-flex-direction: column;
-		        flex-direction: column;
-		-webkit-box-align: center;
-		    -ms-flex-align: center;
-		        align-items: center;
+		flex-direction: column;
+		align-items: center;
 	}
 	.other_icos a img {
 		margin-right: 10px;
@@ -900,11 +816,8 @@ body {
 @media only screen and (max-width: 1150px) {
 	.submitPage_images {
 	    padding-bottom: 60px;
-	    display: -ms-grid;
 	    display: grid;
-	    -webkit-box-pack: center;
-	        -ms-flex-pack: center;
-	            justify-content: center;
+	    justify-content: center;
 	}
 	._images_padding{
 		padding-bottom: 25px;
@@ -1086,12 +999,8 @@ body {
 	}
 	#container .ico_image {
 		width: 100%;
-		display: -webkit-box;
-		display: -ms-flexbox;
 		display: flex;
-		-webkit-box-pack: center;
-		    -ms-flex-pack: center;
-		        justify-content: center;
+		justify-content: center;
 	}
 	#container .ico_name {
 		text-align: center;
@@ -1137,12 +1046,8 @@ body {
 		width: auto;
 	    height: inherit; 
 	    display: block; 
-	    -webkit-box-align: center; 
-	        -ms-flex-align: center; 
-	            align-items: center; 
-	    -webkit-box-pack: justify; 
-	        -ms-flex-pack: justify; 
-	            justify-content: space-between; 
+	    align-items: center; 
+	    justify-content: space-between; 
 	}
 	.header_menu {
 	    width: 100%;
@@ -1159,6 +1064,9 @@ body {
 	}
 	.money_invest{
 		width: 100%;
+	}
+	.loginPage_button{
+		width: 40%;
 	}
 }	
 /*---------------------------------------------------------------*/
@@ -1194,6 +1102,12 @@ body {
 @media only screen and (max-width: 450px) {
 	.icos_names_headings{
 		font-size: 11px;
+	}
+	.submitPage_button{
+		width: 100%;
+	}
+	.newsletter_button{
+		width: 75% !important;
 	}
 }
 /* ----------------------------*/
