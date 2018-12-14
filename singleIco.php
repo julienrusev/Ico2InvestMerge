@@ -6,7 +6,7 @@
 	$twig = new Twig_Environment($loader);
 	//get ico ID
 	$icoID = $_POST["ico_id"];
-	$sql = "SELECT NAME, ICO_SLUG, START_DATE, END_DATE, DESCRIPTION, POTENTIAL_ROI, TITLE, INFO, STATUS FROM ico_data, ico_marks WHERE ico_data.API_ID = ico_marks.MARK_ID AND ico_data.ID='$icoID'";
+	$sql = "SELECT NAME, ICO_SLUG, START_DATE, END_DATE, DESCRIPTION, POTENTIAL_ROI, TITLE, INFO, STATUS, ICO_PROFIT_PER FROM ico_data, ico_marks WHERE ico_data.API_ID = ico_marks.MARK_ID AND ico_data.ID='$icoID'";
 	//$sql = "SELECT * FROM ico_marks WHERE MARK_ID='1'";
 	$result = $conn->query($sql);
 	$dataArray = array();

@@ -435,6 +435,8 @@ body {
 }
 .newsletter_form{
 	text-align: center;
+    padding-top: 4%;
+    padding-bottom: 8%;
 }
 .newsletter_text{
 	font-size: 20px;
