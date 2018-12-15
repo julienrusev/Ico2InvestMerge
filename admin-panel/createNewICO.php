@@ -51,7 +51,7 @@
 			</ul>
 		</div>
 		<div class="text_area">
-			<h1>Here you can add you own ICO</h1>
+			<h1>Here you can add your own ICO</h1>
 			<form action="upload.php" method="post" enctype="multipart/form-data" name="create_form" class="create_form">
 
 				<div class="details">

@@ -173,8 +173,12 @@ textarea {
 .ico_quantity,
 .ico_price,
 .start_date,
-.end_date {
-	width: 269px;
+.end_date,
+.current_price,
+.ico_slug,
+.api_id,
+.name {
+	width: 291px;
 }
 .readonly {
 	background-color: aliceblue;
@@ -325,6 +329,7 @@ label {
 }
 .descr {
 	font-size: 20px;
+	font-weight: bold;
 }
 .ico_description,
 .ico_short_description {
@@ -413,10 +418,12 @@ input[type="file"] {
     display: inline-block;
     padding: 6px 12px;
     cursor: pointer;
-    width: 269px;
+    width: 291px;
     border-radius: 5px;
     background-color: #25a9d5;
     color: white;
+    margin: 5px;
+    margin-right: 0;
 }
 #container_create_ico .details {
 	margin-top: 80px;
@@ -876,6 +883,10 @@ input[type="file"] {
 	#container_create_ico .current_price,
 	#container_create_ico .ico_quantity {
 		margin-left: 0;
+	}
+	#container_create_ico .custom-file-upload {
+		margin-left: 0;
+		width: 50%;
 	}
 }
 @media only screen and (max-width: 600px) {
