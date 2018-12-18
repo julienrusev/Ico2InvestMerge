@@ -1,5 +1,9 @@
 body {
 	margin: 0;
+	height: 100%;
+}
+html{
+	height: 100%;
 }
 .single_ico {
 	position: relative;
@@ -691,8 +695,10 @@ body {
 
 /*----------FOOTER-------------*/
 .mail_footer{
-    width: 100%;
-    bottom: 0;
+	display: flex;
+	justify-content: center;
+	height: 112px;
+	background-color: #333333;
 }
 .footer {
 	display: flex;
@@ -705,6 +711,11 @@ body {
     height: 40px;
     margin-top: 40px;;
 }
+#admin .footer , #logout .footer{
+	position: absolute;
+    width: 100%;
+    bottom: 0;
+}
 /* ----------------------------*/
 
 /*---------LOGIN FORM----------*/
@@ -712,8 +723,7 @@ body {
 	text-align: center;
 	font-family: 'Lato', sans-serif;
 	color: black;
-	padding-top: 19%;
-	padding-bottom: 19%;
+	padding-top: 20%;
 }
 .loginPage_input{
     border-color: #25a9d5;
@@ -1090,9 +1100,6 @@ body {
 	}
 	.newsletter_button{
 		width: 50% !important;
-	}
-	.newsletter_form{
-		overflow-y: scroll;
 	}
 	.submitPage_heading{
 		padding-top: 20px;
