@@ -1,6 +1,4 @@
-<?php
-   include('../include/session.php');
-?>
+<?php include('../include/session.php'); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,18 +14,18 @@
 	<link rel="stylesheet" href="../resources/styles/admin-style.css">
 </head>
 <body>
-<div id="container_index">
-	<div class="header">
-		<div class="header_left">
-			<a href=""><img src="../resources/media/logo.png" alt="logo" class="header_logo"></a>
+	<div id="container_index">
+		<div class="header">
+			<div class="header_left">
+				<a href=""><img src="../resources/media/logo.png" alt="logo" class="header_logo"></a>
+			</div>
+			<div class="header_right">
+				<p class="show">Open Menu</p>
+				<a class="menu_link">
+					<span></span>
+				</a>
+			</div>
 		</div>
-		<div class="header_right">
-			<p class="show">Open Menu</p>
-			<a class="menu_link">
-				<span></span>
-			</a>
-		</div>
-	</div>
 
 		<div class="panel_body">
 			<div class="dashboard">
@@ -44,19 +42,17 @@
 			</div>
 		</div>
 	</div>
-<?php
-	include '../include/footer.php';
-?>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script>
-	$(document).ready(function(){
-		$('.menu_link').click(function(){
-			$('.dashboard').slideToggle('slow');
+	<?php include '../include/footer.php'; ?>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('.menu_link').click(function(){
+				$('.dashboard').slideToggle('slow');
+			});
+			$('.menu_link').click(function(){
+				$('.menu_link').toggleClass('menu_link_active');
+			});
 		});
-		$('.menu_link').click(function(){
-			$('.menu_link').toggleClass('menu_link_active');
-		});
-	});
-</script>
+	</script>
 </body>
 </html>

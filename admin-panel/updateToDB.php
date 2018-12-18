@@ -4,8 +4,6 @@
 	if(isset($_POST['update'])){
 		$value = $_POST['api_id'];
 		$name = $_POST['name'];
-		//$positives = $_POST['positives'];
-		//$negatives = $_POST['negatives'];
 		$positives = isset($_POST['positives'])?$_POST['positives']: NULL;
 		$negatives = isset($_POST['negatives'])?$_POST['negatives']: NULL;
 		$newPositive = isset($_POST['newPositive'])?$_POST['newPositive']: NULL;
@@ -20,7 +18,6 @@
 		$ico_status = $_POST['ico_status'];
 
 		$sql = "UPDATE ico_data SET START_DATE='$start_date', END_DATE='$end_date', ICO_PRICE='$ico_price', ICO_QTY='$ico_qty', DESCRIPTION='$ico_description', SHORT_DESCRIPTION='$ico_short_description', ICO_STATUS='$ico_status' WHERE API_ID='$value'";
-		//mysqli_query($conn, $sql);
 
 		if(!mysqli_query($conn,$sql))
     	{
@@ -48,6 +45,7 @@
 	    		}
 			}
 		}else{}
+
     	//INSERT NEW POSITIVES
     	if($newPositive != NULL){
 
@@ -95,47 +93,45 @@
 	<link rel="stylesheet" href="../resources/styles/admin-style.css">
 </head>
 <body>
-<div id="container_update_todb">
-	<div class="header">
-		<div class="header_left">
-			<a href=""><img src="../resources/media/logo.png" alt="logo" class="header_logo"></a>
+	<div id="container_update_todb">
+		<div class="header">
+			<div class="header_left">
+				<a href=""><img src="../resources/media/logo.png" alt="logo" class="header_logo"></a>
+			</div>
+			<div class="header_right">
+				<p class="show">Open Menu</p>
+				<a class="menu_link">
+					<span></span>
+				</a>
+			</div>
 		</div>
-		<div class="header_right">
-			<p class="show">Open Menu</p>
-			<a class="menu_link">
-				<span></span>
-			</a>
-		</div>
-	</div>
 
-	<div class="panel_body">
-		<div class="dashboard">
-			<ul class="menu">
-				<a href="index"><li class="home">Home</li></a>
-				<a href="update"><li class="update">Update</li></a>
-				<a href="delete"><li class="delete">Delete/Restore</li></a>
-				<a href="createNewICO"><li class="add">Add new ICO</li></a>
-				<a href="../include/logout"><li class="add">Log Out</li></a>
-			</ul>
-		</div>
-		<div class="text_area">
-			<h1>You have succesfully updated <?php echo $name . "<br>";
-			 ?></h1>
+		<div class="panel_body">
+			<div class="dashboard">
+				<ul class="menu">
+					<a href="index"><li class="home">Home</li></a>
+					<a href="update"><li class="update">Update</li></a>
+					<a href="delete"><li class="delete">Delete/Restore</li></a>
+					<a href="createNewICO"><li class="add">Add new ICO</li></a>
+					<a href="../include/logout"><li class="add">Log Out</li></a>
+				</ul>
+			</div>
+			<div class="text_area">
+				<h1>You have succesfully updated <?php echo $name . "<br>";
+				 ?></h1>
+			</div>
 		</div>
 	</div>
-</div>
-	<?php
-		include '../include/footer.php';
-	?>
+	<?php include '../include/footer.php'; ?>
 	<script>
-	$(document).ready(function(){
-		$('.menu_link').click(function(){
-			$('.dashboard').slideToggle('slow');
+		$(document).ready(function(){
+			$('.menu_link').click(function(){
+				$('.dashboard').slideToggle('slow');
+			});
+			$('.menu_link').click(function(){
+				$('.menu_link').toggleClass('menu_link_active');
+			});
 		});
-		$('.menu_link').click(function(){
-			$('.menu_link').toggleClass('menu_link_active');
-		});
-	});
-</script>
+	</script>
 </body>
 </html>
