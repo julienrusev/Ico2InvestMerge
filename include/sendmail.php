@@ -27,5 +27,5 @@
 
     $result = $mailer->send($message);
 
-  	header("Location: ../public/new_ico");
+    var_dump($result);
 ?>
