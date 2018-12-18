@@ -22,7 +22,7 @@
 	<body>
 	<div class="header_include">
 		<div class="header_wrapper">
-			<a href="../index.php"><img src="../media/logo.png" alt="logo" class="header-logo"></a>
+			<a href="../index.php"><img src="../media/logo.png" alt="logo" class="header_logo"></a>
 			<div class="header_menu">
 				<p class="loginHeader">ADMIN PAGE</p>
 			</div>

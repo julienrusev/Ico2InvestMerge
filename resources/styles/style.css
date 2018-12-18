@@ -75,7 +75,7 @@ body {
     background-size: cover;
     background-position: center;
 }
-.advertise-wrapper {
+.advertise_wrapper {
 	width: 1142px;
 	margin: 0 auto;
 	height: inherit;
@@ -760,7 +760,7 @@ body {
 		margin-left: 20px;
 		margin-right: 20px;
 	}
-	.advertise-wrapper {
+	.advertise_wrapper {
 		flex-direction: column;
 		align-items: center;
 		width: 100%;

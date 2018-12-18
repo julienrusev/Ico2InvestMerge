@@ -19,7 +19,7 @@
 	<body>
 	<div class="header_include">
 		<div class="header_wrapper">
-			<a href="../index"><img src="../resources/media/logo.png" alt="logo" class="header-logo"></a>
+			<a href="../index"><img src="../resources/media/logo.png" alt="logo" class="header_logo"></a>
 			<div class="header_menu">
 			    <div class="header_links">
 					<a href="new_ico">publish ico</a>
