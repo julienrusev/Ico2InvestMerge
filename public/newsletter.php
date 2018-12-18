@@ -1,4 +1,5 @@
-<?php include '../include/headerNewsletter.php'; ?>
+<div id="newsletter">
+	<?php include '../include/headerNewsletter.php'; ?>
     
     <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
     </head>
@@ -27,9 +28,8 @@
 			</div>
 		</form>
     </div>
-	<div class="mail_footer">
-		<?php include '../include/footer.php'; ?>
-	</div>
+	<?php include '../include/footer.php'; ?>
+</div>
 
 
 

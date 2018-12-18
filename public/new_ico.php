@@ -1,5 +1,4 @@
-<?php 
-	include '../include/header.php'; ?>
+<?php include '../include/header.php'; ?>
 
 	<script type="text/javascript" src="../resources/scripts/icoSubmit.js"> </script>
 
@@ -63,6 +62,4 @@
 			</div>
 		</div>
 	</div>
-<?php 
-	include '../include/footer.php';
-?>
+<?php include '../include/footer.php'; ?>

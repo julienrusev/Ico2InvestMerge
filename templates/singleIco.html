@@ -20,7 +20,7 @@
 	<div id="container">
 		<div class="header">
 			<div class="header_wrapper">
-				<a href="./index"><img src="./resources/media/logo.png" alt="logo" class="header-logo"></a>
+				<a href="./index"><img src="./resources/media/logo.png" alt="logo" class="header_logo"></a>
 				<div class="header_menu">
 					<div class="ico_profit">
 						<p>ico profit</p>
@@ -77,7 +77,7 @@
 						{% for ico_info in dataArray if ico_info["STATUS"] == 1 %}
 							<div class="accordion">
 							<button class="toggle">{{ ico_info.TITLE }} <span class="plus">+</span></button>
-							<div id="panel-scroll" class="panel">
+							<div id="panel_scroll" class="panel">
 								<p>
 									{{ ico_info.INFO }}
 								</p>
@@ -90,7 +90,7 @@
 						{% for ico_info in dataArray if ico_info["STATUS"] == 0 %}
 							<div class="accordion">
 							<button class="toggle">{{ ico_info.TITLE }} <span class="plus">+</span></button>
-							<div id="panel-scroll" class="panel">
+							<div id="panel_scroll" class="panel">
 								<p>
 									{{ ico_info.INFO }}
 								</p>
