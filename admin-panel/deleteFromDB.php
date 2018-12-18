@@ -37,7 +37,7 @@
 		</div>
 		<div class="header_right">
 			<p class="show">Open Menu</p>
-			<a class="menu-link">
+			<a class="menu_link">
 				<span></span>
 			</a>
 		</div>
@@ -69,11 +69,11 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script>
 	$(document).ready(function(){
-		$('.menu-link').click(function(){
+		$('.menu_link').click(function(){
 			$('.dashboard').slideToggle('slow');
 		});
-		$('.menu-link').click(function(){
-			$('.menu-link').toggleClass('menu-link-active');
+		$('.menu_link').click(function(){
+			$('.menu_link').toggleClass('menu_link_active');
 		});
 	});
 </script>
