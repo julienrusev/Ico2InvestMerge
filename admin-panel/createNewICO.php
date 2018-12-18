@@ -35,7 +35,7 @@
 		</div>
 		<div class="header_right">
 			<p class="show">Open Menu</p>
-			<a class="menu-link">
+			<a class="menu_link">
 				<span></span>
 			</a>
 		</div>
@@ -178,11 +178,11 @@
 ?>
 	<script>
 	$(document).ready(function(){
-		$('.menu-link').click(function(){
+		$('.menu_link').click(function(){
 			$('.dashboard').slideToggle('slow');
 		});
-		$('.menu-link').click(function(){
-			$('.menu-link').toggleClass('menu-link-active');
+		$('.menu_link').click(function(){
+			$('.menu_link').toggleClass('menu_link_active');
 		});
 	});
 </script>

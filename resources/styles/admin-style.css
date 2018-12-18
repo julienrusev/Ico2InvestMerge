@@ -428,7 +428,7 @@ input[type="file"] {
 #container_create_ico .details {
 	margin-top: 80px;
 }
-.menu-link {
+.menu_link {
 	display: none;
 }
 #toggle {
@@ -518,8 +518,8 @@ input[type="file"] {
 }
 /*MEDIA QUERIES*/
 @media only screen and (max-width: 890px) {
-	#container_update .menu-link,
-	#container_delete .menu-link {
+	#container_update .menu_link,
+	#container_delete .menu_link {
 	  display: -webkit-box;
 	  display: -ms-flexbox;
 	  display: flex;
@@ -537,51 +537,51 @@ input[type="file"] {
 	          box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
 	  margin-right: 10px;
 	}
-	#container_update .menu-link span,
-	#container_delete .menu-link span, 
-	#container_update .menu-link span::before,
-	#container_delete .menu-link span::before, 
-	#container_update .menu-link span::after,
-	#container_delete .menu-link span::after {
+	#container_update .menu_link span,
+	#container_delete .menu_link span, 
+	#container_update .menu_link span::before,
+	#container_delete .menu_link span::before, 
+	#container_update .menu_link span::after,
+	#container_delete .menu_link span::after {
 		width: 25px;
 		height: 2px;
 		position: absolute;
 		background-color: rgb(35, 154, 254);
 	}
-	#container_update .menu-link span::before,
-	#container_delete .menu-link span::before,
-	#container_update .menu-link span::after,
-	#container_delete .menu-link span::after {
+	#container_update .menu_link span::before,
+	#container_delete .menu_link span::before,
+	#container_update .menu_link span::after,
+	#container_delete .menu_link span::after {
 		content: '';
 		display: block;
 		-webkit-transition: 0.3s;
 		-o-transition: 0.3s;
 		transition: 0.3s;
 	}
-	#container_update .menu-link span::before,
-	#container_delete .menu-link span::before {
+	#container_update .menu_link span::before,
+	#container_delete .menu_link span::before {
 	-webkit-transform: translateY(-5px);
 	    -ms-transform: translateY(-5px);
 	        transform: translateY(-5px);
 }
-	#container_update .menu-link span::after,
-	#container_delete .menu-link span::after {
+	#container_update .menu_link span::after,
+	#container_delete .menu_link span::after {
 		-webkit-transform: translateY(5px);
 		    -ms-transform: translateY(5px);
 		        transform: translateY(5px);
 	}
-	#container_update .menu-link-active span,
-	#container_delete .menu-link-active span {
+	#container_update .menu_link_active span,
+	#container_delete .menu_link_active span {
 		background-color: transparent;
 	}
-	#container_update .menu-link-active span::before,
-	#container_delete .menu-link-active span::before {
+	#container_update .menu_link_active span::before,
+	#container_delete .menu_link_active span::before {
 		-webkit-transform: rotate(135deg);
 		    -ms-transform: rotate(135deg);
 		        transform: rotate(135deg);
 	}
-	#container_update .menu-link-active span::after,
-	#container_delete .menu-link-active span::after {
+	#container_update .menu_link_active span::after,
+	#container_delete .menu_link_active span::after {
 		-webkit-transform: rotate(-135deg);
 		    -ms-transform: rotate(-135deg);
 		        transform: rotate(-135deg);
@@ -665,7 +665,7 @@ input[type="file"] {
 	#container_upload_ico .dashboard {
 		display: none;
 	}
-	.menu-link {
+	.menu_link {
 	  display: -webkit-box;
 	  display: -ms-flexbox;
 	  display: flex;
@@ -691,41 +691,41 @@ input[type="file"] {
 		width: 50%;
 		margin-bottom: 2%;
 	}
-	.menu-link span, 
-	.menu-link span::before, 
-	.menu-link span::after {
+	.menu_link span, 
+	.menu_link span::before, 
+	.menu_link span::after {
 		width: 25px;
 		height: 2px;
 		position: absolute;
 		background-color: rgb(35, 154, 254);
 	}
-	.menu-link span::before,
-	.menu-link span::after {
+	.menu_link span::before,
+	.menu_link span::after {
 		content: '';
 		display: block;
 		-webkit-transition: 0.3s;
 		-o-transition: 0.3s;
 		transition: 0.3s;
 	}
-	.menu-link span::before {
+	.menu_link span::before {
 	-webkit-transform: translateY(-5px);
 	    -ms-transform: translateY(-5px);
 	        transform: translateY(-5px);
 }
-	.menu-link span::after {
+	.menu_link span::after {
 		-webkit-transform: translateY(5px);
 		    -ms-transform: translateY(5px);
 		        transform: translateY(5px);
 	}
-	.menu-link-active span {
+	.menu_link_active span {
 		background-color: transparent;
 	}
-	.menu-link-active span::before {
+	.menu_link_active span::before {
 		-webkit-transform: rotate(135deg);
 		    -ms-transform: rotate(135deg);
 		        transform: rotate(135deg);
 	}
-	.menu-link-active span::after {
+	.menu_link_active span::after {
 		-webkit-transform: rotate(-135deg);
 		    -ms-transform: rotate(-135deg);
 		        transform: rotate(-135deg);
