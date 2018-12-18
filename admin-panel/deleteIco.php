@@ -5,13 +5,13 @@
 	<meta charset="utf-8">
 	<!--Title-->
 	<!--<link rel="icon" href="media/favicon.ico" sizes="16x16">-->
-	<link rel="icon" href="../media/TitleLogo.png">
+	<link rel="icon" href="../resources/media/TitleLogo.png">
 	<!--Meta`s-->
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
-	<link rel="stylesheet" href="../styles/style.css">
-	<link rel="stylesheet" href="../styles/admin-style.css">
+	<link rel="stylesheet" href="../resources/styles/style.css">
+	<link rel="stylesheet" href="../resources/styles/admin-style.css">
 </head>
 <body>
 
@@ -19,7 +19,7 @@
 
 	<div class="header">
 		<div class="header_left">
-			<a href=""><img src="../media/logo.png" alt="logo" class="header_logo"></a>
+			<a href=""><img src="../resources/media/logo.png" alt="logo" class="header_logo"></a>
 		</div>
 		<div class="header_right">
 			<p class="show">Open Menu</p>

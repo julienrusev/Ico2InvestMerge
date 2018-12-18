@@ -27,26 +27,5 @@
 
     $result = $mailer->send($message);
 
-/*  if ( $result > 0 )
-    {
-        echo "email was sent";//Email was sent
-    }
-    else
-    {
-         echo "email wasnt sent";// Email was not sent
-    }*/
-
-
+  	header("Location: ../public/new_ico");
 ?>
-    <script>
-    if (<?php  echo $result; ?> > 0) {
-      alert("Email was sent!");
-    }
-    else {
-      alert("Email wasnt sent!");
-    }
-    </script>
-
-    <?php 
-      header("Location: ../public/new_ico");
-     ?>

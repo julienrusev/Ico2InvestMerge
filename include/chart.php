@@ -27,9 +27,6 @@ foreach ($result as $row) {
 	$data[] = $row;
 }
 
-//free memory associated with result
-$result->close();
-
 //close connection
 $mysqli->close();
 

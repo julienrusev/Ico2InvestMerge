@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	$.ajax({
-		url: "http://ico2invest.test/templates/chart.php",
+		url: "http://ico2investmerge.test/include/chart.php",
 		method: "GET",
 		success: function(data) {
 			console.log(data);
