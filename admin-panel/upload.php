@@ -21,12 +21,12 @@
     <meta charset="utf-8">
     <!--Title-->
     <!--<link rel="icon" href="media/favicon.ico" sizes="16x16">-->
-    <link rel="icon" href="../media/TitleLogo.png">
+    <link rel="icon" href="../resources/media/TitleLogo.png">
     <!--Meta`s-->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel="stylesheet" href="../styles/style.css">
-    <link rel="stylesheet" href="../styles/admin-style.css">
+    <link rel="stylesheet" href="../resources/styles/style.css">
+    <link rel="stylesheet" href="../resources/styles/admin-style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
         $(document).ready(function(){

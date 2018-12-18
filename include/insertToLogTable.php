@@ -15,11 +15,6 @@
 
 	$myProfit = $profit[0]['PROFIT'];
 
-/*	echo "<pre>";
-	print_r($myProfit);
-	echo "</pre>";*/ 
-
-
 	$sql = "INSERT INTO ico_historical_data(dates, profit) VALUES('$date', '$myProfit')";
 
 	if(!mysqli_query($conn,$sql))

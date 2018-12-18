@@ -14,19 +14,4 @@
     foreach($responseLogo["data"] as $value){
       $logoArray[] = $value["logo"];
     }
-
-    /* Insert SLUG into DATABASE
-    foreach($combinedArray as $key => $value){
-             $sql = "INSERT INTO ico_images(SLUG, URL) VALUES('$key', '$value')";
-
-             mysqli_query($conn, $sql);
-          }
-          if(!mysqli_query($conn,$sql))
-           {
-               die('Error : ' . mysqli_error($conn));
-           }
-           else{
-             echo "URL data added to database";
-    }
-    */
 ?>

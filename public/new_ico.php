@@ -1,7 +1,7 @@
 <?php 
 	include '../include/header.php'; ?>
 
-	<script type="text/javascript" src="../scripts/icoSubmit.js"> </script>
+	<script type="text/javascript" src="../resources/scripts/icoSubmit.js"> </script>
 
 	<div class="main_page_wrapper">
 		<div class="submitPage">
@@ -57,9 +57,9 @@
 		<div class="submitPage_details">
 			<h1 class="submitPage_heading">view ICO details in</h1>
 			<div class="submitPage_images">
-				<a href="https://icobench.com/"><img class="_images_padding icoImages" src="../media/bench.png"></a>
-				<a href="https://www.coinist.io/"><img class="_images_padding icoImages" src="../media/coinist.png"></a>
-				<a href="https://icorating.com/"><img class="icoImages" src="../media/icorating.png"></a>
+				<a href="https://icobench.com/"><img class="_images_padding icoImages" src="../resources/media/bench.png"></a>
+				<a href="https://www.coinist.io/"><img class="_images_padding icoImages" src="../resources/media/coinist.png"></a>
+				<a href="https://icorating.com/"><img class="icoImages" src="../resources/media/icorating.png"></a>
 			</div>
 		</div>
 	</div>
