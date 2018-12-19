@@ -26,6 +26,4 @@
                 'Long description: '. PHP_EOL . $description);
 
     $result = $mailer->send($message);
-
-    var_dump($result);
 ?>
