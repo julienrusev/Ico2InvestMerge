@@ -1036,6 +1036,7 @@ html{
 	    width: 100%;
 	    background-color: #1670a5;
 	    padding-top: 10px;
+	    border-bottom: none;
 	}
 	.header p, .header a {
 		color: black;

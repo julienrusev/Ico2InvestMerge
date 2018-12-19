@@ -79,98 +79,90 @@
 				    	<textarea name="short_description" class="ico_short_description" cols="45" rows="5"></textarea>
 					</div>
 					<div class="pos_holder">
-				    <label class="pos">Positives</label><br>
-				    <div class="textarea_holder_pos">
-				    	<input type="text" name="positives[0][title]" class='pos_title'>
-				    	<textarea name="positives[0][text]" cols="40" rows="5" class="positives"></textarea>
-				    </div><br>
-				    <button type='button' id="add_positive">Add positive</button><br>
+					    <label class="pos">Positives</label><br>
+					    <div class="textarea_holder_pos">
+					    	<input type="text" name="positives[0][title]" class='pos_title'>
+					    	<textarea name="positives[0][text]" cols="40" rows="5" class="positives"></textarea>
+					    </div><br>
+					    <button type='button' id="add_positive">Add positive</button><br>
 					</div>
 					<div class="neg_holder">
-				    <label class="neg">Negatives</label><br>
-				    <div class="textarea_holder_neg">
-				    	<input type="text" name="negatives[0][title]" class="neg_title">
-				    	<textarea name="negatives[0][text]" cols="40" rows="5" class="negatives"></textarea>
-				    </div><br>
-				    <button type='button' id="add_negative">Add negative</button><br><br>
-				</div>
+					    <label class="neg">Negatives</label><br>
+					    <div class="textarea_holder_neg">
+					    	<input type="text" name="negatives[0][title]" class="neg_title">
+					    	<textarea name="negatives[0][text]" cols="40" rows="5" class="negatives"></textarea>
+					    </div><br>
+					    <button type='button' id="add_negative">Add negative</button><br><br>
+					</div>
 				    <input type="submit" name="create_btn" id="" value="Create" class="create_btn">
 
-				    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script>
-			//ADD MORE NEGATIVES
-			$(document).ready(function(){
-				//GET API_ID FROM $dataArray
-				var api_id = $('#hidden_api_id').val();
-				var index = 1;
-				//Add new negative
-				$('#add_negative').on('click', function(){
-					$('#add_negative').before(
-					"<div class='textarea_holder_neg'><input type='text' name='negatives["+index+"][title]' class='neg_title'><textarea name='negatives["+index+"][text]' class='negatives' cols='40' rows='5'></textarea><button type='button' class='remove_text_field'>Delete</button></div><br>"
-					);
-					index++;
-				});
-			});
-			//ONLY DELETE FIELD
-			$('body').on('click', '.remove_text_field', function() {
-				$(this).closest(".textarea_holder_neg").remove();
-			});
-		</script>
+					<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+					<script>
+						//ADD MORE NEGATIVES
+						$(document).ready(function(){
+							//GET API_ID FROM $dataArray
+							var api_id = $('#hidden_api_id').val();
+							var index = 1;
+							//Add new negative
+							$('#add_negative').on('click', function(){
+								$('#add_negative').before(
+									"<div class='textarea_holder_neg'>\
+										<input type='text' name='negatives["+index+"][title]' class='neg_title'>\
+										<textarea name='negatives["+index+"][text]' class='negatives' cols='40' rows='5'></textarea>\
+										<button type='button' class='remove_text_field'>Delete</button>\
+									</div><br>"
+								);
+								index++;
+							});
+						});
+						//ONLY DELETE FIELD
+						$('body').on('click', '.remove_text_field', function() {
+							$(this).closest(".textarea_holder_neg").remove();
+						});
+					</script>
 
-		<script>
-			//ADD MORE POSITIVES
-			$(document).ready(function(){
-				//GET API_ID FROM $dataArray
-				var api_id = $('#hidden_api_id').val();
-				var index = 1;
-				//Add new positive
-				$('#add_positive').on('click', function(){
-					$('#add_positive').before(
-					"<div class='textarea_holder_pos'><input type='text' name='positives["+index+"][title]' class='pos_title'><textarea name='positives["+index+"][text]' class='positives' cols='40' rows='5'></textarea><button type='button' class='remove_text_field'>Delete</button></div><br>"
-					);
-					index++;
-				});
-			});
-			//ONLY DELETE FIELD
-			$('body').on('click', '.remove_text_field', function() {
-				$(this).closest(".textarea_holder_pos").remove();
-			});
-		</script>
-		<!--<script>
-			//console.log(<?php echo $idArray[1]['API_ID']; ?>);
+					<script>
+						//ADD MORE POSITIVES
+						$(document).ready(function(){
+							//GET API_ID FROM $dataArray
+							var api_id = $('#hidden_api_id').val();
+							var index = 1;
+							//Add new positive
+							$('#add_positive').on('click', function(){
+								$('#add_positive').before(
+									"<div class='textarea_holder_pos'>\
+										<input type='text' name='positives["+index+"][title]' class='pos_title'>\
+										<textarea name='positives["+index+"][text]' class='positives' cols='40' rows='5'></textarea>\
+										<button type='button' class='remove_text_field'>Delete</button>\
+									</div><br>"
+								);
+								index++;
+							});
+						});
+						//ONLY DELETE FIELD
+						$('body').on('click', '.remove_text_field', function() {
+							$(this).closest(".textarea_holder_pos").remove();
+						});
+					</script>
+					<script>
+						//GENERATE RANDOM UNIQUE ID
+						var jArray = <?php echo json_encode($idArray); ?>;
 
-			var jArray = <?php echo json_encode($idArray); ?>;
-			$("#valid_id").bind('input' ,function(event) {
-	  			var stt = $(this).val();
-	  			for(var i = 0; i < jArray.length; i++){
-	  				if(stt == jArray[i]['API_ID']){
-	  					$("#valid_id").css("border-color", "red");
-	  					break;
-	  				}else{
-	  					$("#valid_id").css("border-color", "green");
-	  				}
-	  			}
-			});
-		</script>-->
-		<script>
-			//GENERATE RANDOM UNIQUE ID
-			var jArray = <?php echo json_encode($idArray); ?>;
-
-			function getRand() {
-	    		var rand;
-	    		do { // will fail the first time
-	        		rand = Math.floor(Math.random() * 10000); // re-randomize
-	    		} while ($.inArray(rand, jArray) > -1);
-	    			return rand;
-			}
-			var x = getRand();
-			document.getElementById("valid_id").value = x;
-		</script>
+						function getRand() {
+				    		var rand;
+				    		do { // will fail the first time
+				        		rand = Math.floor(Math.random() * 10000); // re-randomize
+				    		} while ($.inArray(rand, jArray) > -1);
+				    			return rand;
+						}
+						var x = getRand();
+						document.getElementById("valid_id").value = x;
+					</script>
 				</form>
 			</div>
 		</div>
 	</div>
-<?php include '../include/footer.php'; ?>
+	<?php include '../include/footer.php'; ?>
 	<script>
 		$(document).ready(function(){
 			$('.menu_link').click(function(){
