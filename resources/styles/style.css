@@ -682,6 +682,16 @@ html{
 	margin-bottom: 60px;
 	margin-top: 30px;
 }
+.green{
+    margin-top: 2%;
+    color: green;
+    font-size: 24px;
+}
+.red{
+    margin-top: 2%;
+    color: red;
+    font-size: 24px;
+}
 /*-----------------------------*/
 
 /*---------NEW ICO-------------*/
@@ -1026,7 +1036,7 @@ html{
 	#container .positives,
 	#container .negatives {
 		width: 100%;
-	}
+	}	
 }
 /*---------------------------------------------------------------*/
 /*--------------------MEDIA QUERY /<=680px/-----------------------*/
@@ -1034,7 +1044,7 @@ html{
 	.header {
 	    height: 140px;
 	    width: 100%;
-	    background-color: #1670a5;
+	    background-color: white;
 	    padding-top: 10px;
 	    border-bottom: none;
 	}
@@ -1042,13 +1052,21 @@ html{
 		color: black;
 		font-weight: 600;
 	}
+	.header p:hover, .header a:hover {
+		color: black;
+		font-weight: 600;
+	}
 	.header_include {
 	    height: 100px;
 	    width: 100%;
-	    background-color: #1670a5 !important;
+	    background-color: white !important;
 	    padding-top: 10px;
 	}
 	.header_include p, .header_include a {
+		color: black;
+		font-weight: 600;
+	}
+	.header_include p:hover, .header_include a:hover {
 		color: black;
 		font-weight: 600;
 	}
@@ -1118,6 +1136,9 @@ html{
 	}
 	.newsletter_button{
 		width: 75% !important;
+	}
+	.loginHeader{
+		display: none;
 	}
 }
 /* ----------------------------*/

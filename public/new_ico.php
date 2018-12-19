@@ -1,7 +1,35 @@
 <?php include '../include/header.php'; ?>
 
 	<script type="text/javascript" src="../resources/scripts/icoSubmit.js"> </script>
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script>
+	$(function () {
 
+		$('#mail_form').on('submit', function (e) {
+
+		  	e.preventDefault();
+
+		  	$.ajax({
+		        type: 'post',
+		        url: '../include/sendmail.php',
+		        data: $('#mail_form').serialize(),
+		        success: function () {
+		          	$("#btnRegister").after(
+		          	"<div class='green'>Thank you! Your message has been sent successfully.</div>"
+		          	)
+			        $("form").trigger("reset");
+		        },
+		        error: function () {
+					$("#btnRegister").after(
+						"<div class='red'>Your message was not send!</div>"
+						)
+					$("form").trigger("reset");
+		        },
+			});
+		});
+		
+	});
+    </script>
 	<div class="main_page_wrapper">
 		<div class="submitPage">
 			<h3 class="submitPage_heading">This form allows you to submit a brand new ICO to be listed on our site.</h3>
@@ -17,7 +45,7 @@
 				</div>
 			</div>
 			<p class="submitPage_tеxt"><span class="submitPage_required">* </span>Required fields</p>
-			<form class="submitPage_form" method="POST" name="contactform" action="../include/sendmail.php">
+			<form class="submitPage_form" method="POST" name="contactform" id="mail_form">
 				<p class="submitPage_text"><span class="submitPage_required">*</span>Contact Email</p>
 				<input class="submitPage_input" type="email hidden" id="email" name="email" required>
 				<p class="submitPage_text"><span class="submitPage_required">*</span>Confirm Contact Email</p>
@@ -48,7 +76,7 @@
 				<input class="submitPage_input" name="message" type="text" required>
 				<p class="submitPage_text">Long Description of Project</p>
 				<textarea class="submitPage_textarea" name="description"></textarea>
-				<div class="submitPage_button_align">
+				<div class="submitPage_button_align send">
 					<input type="submit" class="submitPage_button" value="SUBMIT ICO" id="btnRegister">
 				</div>
 			</form>
