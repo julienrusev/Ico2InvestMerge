@@ -10,16 +10,24 @@ html{
 	top: 110px;
 }
 .header {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	        justify-content: center;
 	height: 112px;
 	border-bottom: 1px solid rgb(222, 222, 226);
 	position: absolute;
 	width: 100%; 
 }
 .header_include {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	        justify-content: center;
 	height: 112px;
 	border-bottom: 1px solid rgb(222, 222, 226);
 	width: 100%;
@@ -31,16 +39,28 @@ html{
 .header_wrapper {
 	width: 1142px;
 	height: inherit;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
-	justify-content: space-between;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	        justify-content: space-between;
 }
 .header_menu {
 	width: 360px;
 	height: inherit;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+            align-items: center;
 }
 .ico_profit {
 	color: white;
@@ -83,8 +103,12 @@ html{
 	width: 1142px;
 	margin: 0 auto;
 	height: inherit;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	        justify-content: space-between;
 }
 .stats {
 	position: relative;
@@ -117,9 +141,16 @@ html{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+            align-items: center;
     margin-top: 100px;
     background-position-y: -40px; 
 }
@@ -200,6 +231,8 @@ html{
 	margin: 0 auto;
 }
 .icos_names{
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	height: 90px;
 }
@@ -223,6 +256,8 @@ html{
     padding-bottom: 35px;
 }
 .icoList_names{
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	height: 90px;
 	padding-left: 4%;
@@ -248,6 +283,8 @@ html{
 	color: black;
 }
 .list{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding-top: 30px;
     padding-bottom: 30px;
@@ -362,8 +399,12 @@ html{
 }
 .submitPage_images{
 	padding-bottom: 60px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 .submitPage_required{
 	color: red;
@@ -545,8 +586,12 @@ html{
 	background-color: rgb(228, 228, 228);
 }
 .ico_accordion {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	        justify-content: space-between;
 }
 .positives {
 	width: 49.122807017543856%;
@@ -628,8 +673,12 @@ html{
 	margin-top: 30px;
 }
 .questions {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	        justify-content: space-between;
 	padding-top: 45px;
 }
 .first_question, .second_question {
@@ -677,8 +726,12 @@ html{
     text-transform: uppercase;
 }
 .other_icos {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	        justify-content: space-between;
 	margin-bottom: 60px;
 	margin-top: 30px;
 }
@@ -705,14 +758,22 @@ html{
 
 /*----------FOOTER-------------*/
 .mail_footer{
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	        justify-content: center;
 	height: 112px;
 	background-color: #333333;
 }
 .footer {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	        justify-content: center;
 	height: 112px;
 	background-color: #333333;
 }
@@ -781,8 +842,13 @@ html{
 		margin-right: 20px;
 	}
 	.advertise_wrapper {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
 		flex-direction: column;
-		align-items: center;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		        align-items: center;
 		width: 100%;
 	}
 	.advertise {
@@ -803,8 +869,13 @@ html{
 		width: unset;
 	}
 	.other_icos {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
 		flex-direction: column;
-		align-items: center;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		        align-items: center;
 	}
 	.other_icos a img {
 		margin-right: 10px;
@@ -838,8 +909,11 @@ html{
 @media only screen and (max-width: 1150px) {
 	.submitPage_images {
 	    padding-bottom: 60px;
+	    display: -ms-grid;
 	    display: grid;
-	    justify-content: center;
+	    -webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	            justify-content: center;
 	}
 	._images_padding{
 		padding-bottom: 25px;
@@ -1021,8 +1095,12 @@ html{
 	}
 	#container .ico_image {
 		width: 100%;
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
-		justify-content: center;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		        justify-content: center;
 	}
 	#container .ico_name {
 		text-align: center;
@@ -1077,8 +1155,12 @@ html{
 		width: auto;
 	    height: inherit; 
 	    display: block; 
-	    align-items: center; 
-	    justify-content: space-between; 
+	    -webkit-box-align: center; 
+	    -ms-flex-align: center; 
+	            align-items: center; 
+	    -webkit-box-pack: justify; 
+	    -ms-flex-pack: justify; 
+	            justify-content: space-between; 
 	}
 	.header_menu {
 	    width: 100%;
